@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="container__edit">
+        <form id="form-update-task" data-taskid="{{ .Task.ID }}">
+            <label for="task">
+                <span>Задание</span>
+                <input type="text" name="task" value="{{ .Task.task }}">
+            </label>
+
+            <label for="descr">
+                <span>Описание</span>
+                <input type="text" name="descr" value="{{ .Task.Descr }}">
+            </label>
+
+            <button>Изменить</button>
+        </form>
+    </div>
+</div>

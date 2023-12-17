@@ -1,0 +1,14 @@
+<div class="container container__tasks">
+    {{if .Task}}
+
+    <div class="content">
+        <p class="task">{{ .Task.task }}</p>
+        <p class="descr">{{ .Task.Descr }}</p>
+    </div>
+    
+    <div class="actions">
+        <a href="/task/{{ .Task.ID }}/edit" class="btn-secondary">Изменить</a>
+        <button id="delete-button" data-taskid="{{ .Task.ID }}" class="btn-danger">Удалить</button>
+    </div>
+    {{end}}
+</div>

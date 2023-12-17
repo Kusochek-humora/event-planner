@@ -1,0 +1,23 @@
+<div class="container">
+    {{if .Tasks}}
+    {{ range .Tasks }}
+    <a href="/task/{{ .ID }}">
+        <div class="task-item">
+            <div class="task-wrapper">
+                <p class="task-id">{{ .ID }}</p>
+                <p class="task">{{ .Task }}</p>
+                <div class="actions">
+                    {{template "icon-arrow-right" .}}
+                </div>
+            </div>
+        </div>
+    </a>
+
+    {{ end }}
+    {{else}}
+    <div class="no-tasks">
+        <p>Нет заданий .</p>
+        <p><a href="/task">Добавить</a></p>
+    </div>
+    {{end}}
+</div>
